@@ -114,7 +114,7 @@ export default function Home() {
       {/* Footer */}
       <ScrollReveal direction="up" delay={0}>
         <footer className="mt-16 text-center text-xs text-text-muted py-6">
-          <p>-- .- -.. .  -... -.--  -.- .... .- .-. ... .- ....</p>
+          <p>-- .- -.. .  -... -.--  -.- .... .- .-. ... .- ....  .- -. -..  -.-- .- --.. . . -..</p>
         </footer>
       </ScrollReveal>
 
