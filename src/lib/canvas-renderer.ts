@@ -1,5 +1,28 @@
 import { DesignConfig } from "@/config/designs";
 
+/** Ensure the IBM Plex Sans Arabic font is loaded before canvas rendering */
+async function ensureFontLoaded(): Promise<void> {
+  const fontName = "IBM Plex Sans Arabic";
+  // Check if already loaded
+  if (document.fonts.check(`500 48px '${fontName}'`)) return;
+
+  // Load from local TTF
+  const font = new FontFace(fontName, "url(/fonts/IBMPlexSansArabic-Regular.ttf)", {
+    weight: "400 600",
+    style: "normal",
+  });
+
+  try {
+    const loaded = await font.load();
+    document.fonts.add(loaded);
+    // Wait for the font to be ready for use
+    await document.fonts.ready;
+  } catch {
+    // Font may already be loaded via CSS, continue anyway
+    console.warn("Could not load IBM Plex Sans Arabic font file, falling back to CSS.");
+  }
+}
+
 /** Load an image from a URL and return an HTMLImageElement */
 function loadImage(src: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
@@ -77,7 +100,8 @@ export async function renderDesign(
   const ctx = canvas.getContext("2d");
   if (!ctx) throw new Error("Could not create canvas context");
 
-  const img = await loadImage(design.imagePath);
+  // Load font and image in parallel
+  const [img] = await Promise.all([loadImage(design.imagePath), ensureFontLoaded()]);
   ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
   if (!name.trim()) return canvas;
