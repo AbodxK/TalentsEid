@@ -111,12 +111,6 @@ export default function Home() {
         </ScrollReveal>
       </div>
 
-      {/* Footer */}
-      <ScrollReveal direction="up" delay={0}>
-        <footer className="mt-16 text-center text-xs text-text-muted py-6">
-          <p>-- .- -.. .  -... -.--  -.- .... .- .-. ... .- ....  .- -. -..  -.-- .- --.. . . -..</p>
-        </footer>
-      </ScrollReveal>
 
       <Confetti active={showConfetti} onComplete={() => setShowConfetti(false)} />
 
