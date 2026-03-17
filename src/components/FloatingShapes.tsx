@@ -223,6 +223,7 @@ export default function FloatingShapes({ onPop }: FloatingShapesProps) {
 
   // Pick light (index 0) or dark (index 1) image set
   const themeIndex = theme === "dark" ? 0 : 1;
+  const isDark = theme === "dark";
 
   return (
     <>
@@ -256,8 +257,34 @@ export default function FloatingShapes({ onPop }: FloatingShapesProps) {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  position: "relative",
+                  background: isDark
+                    ? `radial-gradient(circle at 35% 30%, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 40%, rgba(255,255,255,0.01) 60%, transparent 70%)`
+                    : `radial-gradient(circle at 35% 30%, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.3) 30%, rgba(200,200,210,0.15) 60%, rgba(180,180,200,0.05) 80%, transparent 100%)`,
+                  boxShadow: isDark
+                    ? `inset 0 0 ${bubble.size * 0.15}px rgba(255,255,255,0.1), 0 0 ${bubble.size * 0.08}px rgba(150,150,150,0.06)`
+                    : `inset 0 0 ${bubble.size * 0.2}px rgba(255,255,255,0.6), 0 ${bubble.size * 0.03}px ${bubble.size * 0.1}px rgba(0,0,0,0.06), 0 0 ${bubble.size * 0.05}px rgba(100,100,120,0.1)`,
+                  border: isDark
+                    ? "1px solid rgba(255,255,255,0.12)"
+                    : "1px solid rgba(255,255,255,0.6)",
+                  backdropFilter: "blur(0.5px)",
                 }}
               >
+                {/* Bubble shine highlight */}
+                <div
+                  className="absolute rounded-full pointer-events-none"
+                  style={{
+                    width: "40%",
+                    height: "25%",
+                    top: "12%",
+                    left: "18%",
+                    background: isDark
+                      ? "linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.05) 100%)"
+                      : "linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.2) 100%)",
+                    borderRadius: "50%",
+                    transform: "rotate(-20deg)",
+                  }}
+                />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={imgSrc}
@@ -268,7 +295,7 @@ export default function FloatingShapes({ onPop }: FloatingShapesProps) {
                     width: imgSize,
                     height: imgSize,
                     objectFit: "contain",
-                    opacity: 0.35,
+                    opacity: 0.45,
                     pointerEvents: "none",
                     userSelect: "none",
                   }}
