@@ -36,8 +36,11 @@ interface PhysicsBubble {
 }
 
 function randomBubble(id: number, fromTop = false): PhysicsBubble {
-  const size = 40 + Math.random() * 80;
   const w = typeof window !== "undefined" ? window.innerWidth : 1200;
+  const isMobile = w < 768;
+  const size = isMobile
+    ? 25 + Math.random() * 35   // 25–60px on mobile
+    : 40 + Math.random() * 80;  // 40–120px on desktop
   const h = typeof window !== "undefined" ? window.innerHeight : 800;
 
   let x: number, y: number;
