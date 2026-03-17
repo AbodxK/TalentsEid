@@ -9,7 +9,7 @@ export default function GeometricPattern() {
         viewBox="0 0 200 200"
         style={{ animation: "geo-rotate 60s linear infinite" }}
       >
-        <g fill="none" stroke="#6366f1" strokeWidth="0.5">
+        <g fill="none" stroke="#888888" strokeWidth="0.5">
           {/* Islamic 8-pointed star pattern */}
           <polygon points="100,10 120,80 190,80 130,120 150,190 100,150 50,190 70,120 10,80 80,80" />
           <polygon points="100,30 115,80 170,80 125,110 140,170 100,140 60,170 75,110 30,80 85,80" />
@@ -30,7 +30,7 @@ export default function GeometricPattern() {
         viewBox="0 0 200 200"
         style={{ animation: "geo-rotate 80s linear infinite reverse" }}
       >
-        <g fill="none" stroke="#8b5cf6" strokeWidth="0.5">
+        <g fill="none" stroke="#777777" strokeWidth="0.5">
           <polygon points="100,10 120,80 190,80 130,120 150,190 100,150 50,190 70,120 10,80 80,80" />
           <circle cx="100" cy="100" r="90" />
           <circle cx="100" cy="100" r="60" />
@@ -46,7 +46,7 @@ export default function GeometricPattern() {
         viewBox="0 0 100 100"
         style={{ animation: "geo-pulse 8s ease-in-out infinite" }}
       >
-        <g fill="none" stroke="#a78bfa" strokeWidth="0.3">
+        <g fill="none" stroke="#999999" strokeWidth="0.3">
           <rect x="20" y="20" width="60" height="60" transform="rotate(45 50 50)" />
           <rect x="30" y="30" width="40" height="40" transform="rotate(45 50 50)" />
           <rect x="40" y="40" width="20" height="20" transform="rotate(45 50 50)" />

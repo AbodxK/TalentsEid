@@ -161,7 +161,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
         <div
           className={`
             absolute w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] rounded-full
-            border border-indigo-500/20
+            border border-gray-500/20
             ${phase === "logo" || phase === "flash" ? "animate-orbit-ring" : "opacity-0"}
           `}
         />
@@ -170,7 +170,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
         <div
           className={`
             absolute w-[380px] h-[380px] sm:w-[480px] sm:h-[480px] rounded-full
-            border border-purple-500/10
+            border border-gray-400/10
             ${phase === "logo" || phase === "flash" ? "animate-orbit-ring-reverse" : "opacity-0"}
           `}
         />
@@ -179,7 +179,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
       {/* Scan line sweep */}
       <div
         className={`
-          absolute inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-indigo-400/60 to-transparent
+          absolute inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-gray-400/60 to-transparent
           ${phase === "logo" ? "animate-scan-line" : "opacity-0"}
         `}
       />

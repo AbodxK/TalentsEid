@@ -81,7 +81,7 @@ export default function NameInput({ value, onChange }: NameInputProps) {
           autoComplete="off"
         />
         {/* Animated underline indicator */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-primary via-purple-500 to-primary rounded-full transition-all duration-500 w-0 group-focus-within:w-3/4" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-primary via-gray-500 to-primary rounded-full transition-all duration-500 w-0 group-focus-within:w-3/4" />
       </div>
       {value.length > 0 && (
         <p className="mt-1.5 text-xs text-text-muted text-right animate-fade-in">

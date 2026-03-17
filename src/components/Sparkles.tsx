@@ -14,7 +14,7 @@ interface Particle {
   type: "circle" | "star";
 }
 
-const COLORS = ["#6366f1", "#8b5cf6", "#a78bfa", "#c4b5fd", "#e0e7ff", "#f5d0fe"];
+const COLORS = ["#888888", "#999999", "#aaaaaa", "#bbbbbb", "#cccccc", "#dddddd"];
 
 export default function Sparkles() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #6366f1;
-  --color-primary-hover: #4f46e5;
-  --color-primary-light: #e0e7ff;
+  --color-primary: #4a4a4a;
+  --color-primary-hover: #3a3a3a;
+  --color-primary-light: #e8e8e8;
   --color-surface: #ffffff;
-  --color-surface-alt: #f8fafc;
-  --color-border: #e2e8f0;
-  --color-text: #0f172a;
-  --color-text-muted: #64748b;
+  --color-surface-alt: #f5f5f5;
+  --color-border: #e0e0e0;
+  --color-text: #1a1a1a;
+  --color-text-muted: #6b6b6b;
   --color-success: #10b981;
   --color-error: #ef4444;
   --font-sans: "Inter", "Segoe UI", "Arial", sans-serif;
@@ -16,14 +16,14 @@
 
 /* Dark mode overrides */
 html[data-theme="dark"] {
-  --color-primary: #818cf8;
-  --color-primary-hover: #6366f1;
-  --color-primary-light: #1e1b4b;
-  --color-surface: #1e1b2e;
-  --color-surface-alt: #0f0d1a;
-  --color-border: #2d2b3d;
-  --color-text: #e2e8f0;
-  --color-text-muted: #94a3b8;
+  --color-primary: #9a9a9a;
+  --color-primary-hover: #b0b0b0;
+  --color-primary-light: #2a2a2a;
+  --color-surface: #1e1e1e;
+  --color-surface-alt: #141414;
+  --color-border: #333333;
+  --color-text: #e5e5e5;
+  --color-text-muted: #999999;
   --color-success: #34d399;
   --color-error: #f87171;
 }
@@ -36,20 +36,20 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 25%, #f8fafc 50%, #ede9fe 75%, #f8fafc 100%);
+  background: linear-gradient(135deg, #f5f5f5 0%, #ebebeb 25%, #f5f5f5 50%, #e8e8e8 75%, #f5f5f5 100%);
   background-size: 400% 400%;
   animation: gradient-shift 15s ease infinite;
   transition: background 0.5s ease, color 0.3s ease;
 }
 
 html[data-theme="dark"] body {
-  background: linear-gradient(135deg, #0f0d1a 0%, #1a1535 25%, #0f0d1a 50%, #1e1540 75%, #0f0d1a 100%);
+  background: linear-gradient(135deg, #141414 0%, #1a1a1a 25%, #141414 50%, #1e1e1e 75%, #141414 100%);
   background-size: 400% 400%;
 }
 
 /* Dark mode scrollbar */
 html[data-theme="dark"] ::-webkit-scrollbar-thumb {
-  background: #3d3b50;
+  background: #444444;
 }
 
 
@@ -120,7 +120,7 @@ html[data-theme="dark"] ::-webkit-scrollbar-thumb {
   background: linear-gradient(
     110deg,
     transparent 25%,
-    rgba(99, 102, 241, 0.15) 37%,
+    rgba(100, 100, 100, 0.15) 37%,
     transparent 50%
   );
   background-size: 200% 100%;
@@ -146,10 +146,10 @@ html[data-theme="dark"] ::-webkit-scrollbar-thumb {
 /* Pulse glow for download button */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+    box-shadow: 0 0 0 0 rgba(100, 100, 100, 0.4);
   }
   50% {
-    box-shadow: 0 0 20px 4px rgba(99, 102, 241, 0.25);
+    box-shadow: 0 0 20px 4px rgba(100, 100, 100, 0.25);
   }
 }
 
@@ -160,10 +160,10 @@ html[data-theme="dark"] ::-webkit-scrollbar-thumb {
 /* Glowing border for selected card */
 @keyframes glow-border {
   0%, 100% {
-    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 0 0 2px rgba(100, 100, 100, 0.3);
   }
   50% {
-    box-shadow: 0 0 16px 2px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 0 16px 2px rgba(100, 100, 100, 0.4);
   }
 }
 
@@ -173,10 +173,10 @@ html[data-theme="dark"] ::-webkit-scrollbar-thumb {
 
 /* Gradient border animation for input focus */
 @keyframes border-gradient {
-  0% { border-color: #6366f1; }
-  33% { border-color: #8b5cf6; }
-  66% { border-color: #a78bfa; }
-  100% { border-color: #6366f1; }
+  0% { border-color: #4a4a4a; }
+  33% { border-color: #5a5a5a; }
+  66% { border-color: #7a7a7a; }
+  100% { border-color: #4a4a4a; }
 }
 
 .animate-border-gradient:focus {
@@ -212,7 +212,7 @@ html[data-theme="dark"] ::-webkit-scrollbar-thumb {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(99, 102, 241, 0.4);
+  background: rgba(100, 100, 100, 0.4);
   transform: translate(-50%, -50%) scale(0);
   animation: ripple 0.6s ease-out forwards;
   pointer-events: none;

@@ -25,9 +25,9 @@ interface Particle {
 }
 
 const COLORS = [
-  "#6366f1", "#8b5cf6", "#ec4899", "#f43f5e",
-  "#f59e0b", "#10b981", "#06b6d4", "#a78bfa",
-  "#fbbf24", "#34d399", "#f472b6", "#818cf8",
+  "#555555", "#777777", "#999999", "#bbbbbb",
+  "#666666", "#888888", "#aaaaaa", "#cccccc",
+  "#444444", "#6a6a6a", "#8a8a8a", "#b0b0b0",
 ];
 
 const PARTICLE_COUNT = 120;
