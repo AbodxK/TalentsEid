@@ -11,7 +11,6 @@ import Toast from "@/components/Toast";
 import FloatingShapes from "@/components/FloatingShapes";
 import Sparkles from "@/components/Sparkles";
 import MouseGlow from "@/components/MouseGlow";
-import GeometricPattern from "@/components/GeometricPattern";
 import SharePanel from "@/components/SharePanel";
 import Confetti from "@/components/Confetti";
 import LoadingScreen from "@/components/LoadingScreen";
@@ -61,7 +60,7 @@ export default function Home() {
     <>
     {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
     <main className={`min-h-screen pb-12 relative transition-opacity duration-500 ${loading ? "opacity-0" : "opacity-100"}`}>
-      <GeometricPattern />
+
       <FloatingShapes onPop={handleBubblePop} />
       <MouseGlow />
       <Sparkles />
