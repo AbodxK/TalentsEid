@@ -226,7 +226,7 @@ export default function FloatingShapes({ onPop }: FloatingShapesProps) {
 
   return (
     <>
-      <div className="fixed inset-0 overflow-hidden z-[1]" aria-hidden="true">
+      <div className="fixed inset-0 overflow-hidden z-[15] pointer-events-none" aria-hidden="true">
         {renderBubbles.map((bubble) => {
           const imgSrc = elementImages[bubble.iconIndex][themeIndex];
           const imgSize = bubble.size * 0.55;
