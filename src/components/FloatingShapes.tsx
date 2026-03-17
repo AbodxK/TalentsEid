@@ -222,7 +222,7 @@ export default function FloatingShapes({ onPop }: FloatingShapesProps) {
   }, [onPop]);
 
   // Pick light (index 0) or dark (index 1) image set
-  const themeIndex = theme === "dark" ? 1 : 0;
+  const themeIndex = theme === "dark" ? 0 : 1;
 
   return (
     <>
